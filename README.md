@@ -24,7 +24,18 @@ Design document
 * 趋势递增：支持生成ID的趋势递增 （Increasing trend: Support the increasing trend of ID generation）
 * 低延时：在高并发特性的基础上rt控制在1ms以内 （Low latency: rt is controlled within 1ms on the basis of high concurrency）
  
-## 架构图
+## 架构图（Architecture diagram）
+
+###segment模式（segment model）
+
+segment模式的实现原理是通过mysql实现的：通过mysql计数来获得唯一ID，主要优化的创新点有以下几点：（The realization principle of segment mode is realized through mysql: the unique ID is obtained through mysql counting, and the main optimization innovations are as follows：）
+* 通过缓存的方式避免访问频繁访问mysql引起的rt“尖刺”（Avoid rt "spikes" caused by frequent access to MySQL by caching）
+* 通过内部的双端队列达到在mysql宕机的时候系统仍能支撑一段时间的目的（Through the internal double-ended queue, the system can still support a period of time when mysql is down.）
+
+segment模式从在开发环境部署到为了满足高可用高性能的生产部署模式大致如下：
+
+#### 单机部署
+
 
 # SLA
 ---
