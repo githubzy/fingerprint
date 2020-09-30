@@ -24,7 +24,7 @@ Design document
 * 趋势递增：支持生成ID的趋势递增 （Increasing trend: Support the increasing trend of ID generation）
 * 低延时：在高并发特性的基础上rt控制在1ms以内 （Low latency: rt is controlled within 1ms on the basis of high concurrency）
  
-## 
+## 架构图
 
 # SLA
 ---
