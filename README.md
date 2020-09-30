@@ -16,7 +16,15 @@ The fingerprint is generated from the generation request of the order number. In
 
 Design document
 ---
-//TODO
+## 设计目标（Design goals）
+
+* 接入简单：提供http接入能力以及方便公司rpc集成 （Simple access: provide http access capability and facilitate company rpc integration）
+* 高可用：即时部分fingerprint服务宕机或者存储注入mysql宕机也能提供一段时间服务 （High availability: Even if part of the fingerprint service is down or storage injection mysql is down, it can provide services for a period of time）
+* 高并发：支持10W+QPS起 （High concurrency: support from 10W+QPS）
+* 趋势递增：支持生成ID的趋势递增 （Increasing trend: Support the increasing trend of ID generation）
+* 低延时：在高并发特性的基础上rt控制在1ms以内 （Low latency: rt is controlled within 1ms on the basis of high concurrency）
+ 
+## 
 
 # SLA
 ---
