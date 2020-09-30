@@ -26,7 +26,7 @@ Design document
  
 ## 架构图（Architecture diagram）
 
-###segment模式（segment model）
+### segment模式（segment model）
 
 segment模式的实现原理是通过mysql实现的：通过mysql计数来获得唯一ID，主要优化的创新点有以下几点：（The realization principle of segment mode is realized through mysql: the unique ID is obtained through mysql counting, and the main optimization innovations are as follows：）
 * 通过缓存的方式避免访问频繁访问mysql引起的rt“尖刺”（Avoid rt "spikes" caused by frequent access to MySQL by caching）
